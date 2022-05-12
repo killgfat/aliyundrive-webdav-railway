@@ -1,16 +1,17 @@
 services:
   # A Docker web service
   - type: web
-    name: Ngrok
+    name: Aliyundrive-Webdav
     env: docker
-    repo: https://github.com/AkashiCoin/Railway-Ngrok.git # optional
-    region: Singapore # optional (defaults to oregon)
+    repo: https://github.com/killgfat/aliyundrive-webdav-railway.git
     plan: free # optional (defaults to starter)
     healthCheckPath: /
     envVars:
       - key: PORT
-        value: 80
-      - key: NGROK_TOKEN
+        value: 8080
+      - key: REFRESH_TOKEN
         sync: false
-      - key: REGION
+      - key: WEBDAV_AUTH_USER
+        sync: false
+      - key: WEBDAV_AUTH_PASSWORD
         sync: false
